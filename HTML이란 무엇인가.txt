@@ -1,4 +1,4 @@
-﻿1.HTML은 Hyper Text Markup Language 약자다
+﻿1. HTML은 Hyper Text Markup Language 약자다
 
 1. HTML은 웹 페이지의 구조를 나타낸다.
 
