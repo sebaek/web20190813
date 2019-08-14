@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        .main-menu {
+            display: flex;
+            text-align: center;
+        }
+        .main-menu > li {
+            flex: 1;
+            position: relative;
+            margin: 0 20 0 20;
+            padding: 20;
+        }
+
+        .main-menu > li:hover > .submenu {
+            display: block;
+        }
+
+        .main-menu > li:hover {
+            border-bottom: 1px solid blue;
+        }
+        
+        .main-menu .submenu {
+            position: absolute;
+            width: 90%;
+            left: 0;
+            top: 100%;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="main-menu">
+        <li>HOME
+            <ul class="submenu">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </li>
+        <li>SHOP
+            <ul class="submenu">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </li>
+        <li>ABOUT
+            <ul class="submenu">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </li>
+        <li>MAP
+            <ul class="submenu">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
