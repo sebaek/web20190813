@@ -7,41 +7,60 @@
             list-style: none;
             padding: 0;
         }
+
         .main-menu {
             display: flex;
             text-align: center;
         }
-        .main-menu > li {
+
+        .main-menu>li {
             flex: 1;
             position: relative;
             margin: 0 20 0 20;
-            padding: 20;
-            height: 30px;
+            padding: 5px;
+            height: 42px;
             box-sizing: border-box;
+            line-height: 32px;
+            background-color: aqua;
+            border-left: 1px solid skyblue;
+            border-right: 1px solid skyblue;
         }
 
-        .main-menu > li:hover > .submenu {
+        .main-menu>li:hover>.submenu {
             display: block;
         }
 
-        .main-menu > li:hover {
+        .main-menu>li:hover {
             border-bottom: 1px solid blue;
         }
-        
+
         .main-menu .submenu {
             position: absolute;
             left: 0;
-            top: 30px;
-            background-color: white;
-            width: 90%;
+            top: 42px;
+            background-color: rgb(109, 90, 90);
+            width: 100%;
             display: none;
+        }
+
+        .main-menu .submenu > li {
+            color: white;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
     </style>
 </head>
 
 <body>
     <ul class="main-menu">
-        <li>HOME
+        <li>HOME1
+            <ul class="submenu">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </li>
+        <li>HOME2
             <ul class="submenu">
                 <li>menu1</li>
                 <li>menu2</li>
@@ -72,7 +91,9 @@
     </ul>
 
     <h1>Lorem, ipsum dolor.</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate unde facilis! Dignissimos nihil suscipit dolorum, ea perferendis, quis consectetur officia id autem praesentium asperiores temporibus labore odio maiores sequi?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate unde facilis! Dignissimos nihil
+        suscipit dolorum, ea perferendis, quis consectetur officia id autem praesentium asperiores temporibus labore
+        odio maiores sequi?</p>
 </body>
 
 </html>
