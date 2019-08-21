@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="p01">강호동</p>
+        <p id="p02">유재석</p>
+        <button onclick="change()">바꿔라</button>
+
+        <script>
+        //change 함수 작성
+        function change() {
+            var a = document.getElementById("p01").innerHTML;
+            var b = document.getElementById("p02").innerHTML;
+
+            document.getElementById("p01").innerHTML = b;
+            document.getElementById("p02").innerHTML = a;
+        }
+        </script>
+    </body>
+</html>
