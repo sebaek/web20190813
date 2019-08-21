@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .container {
+            border: 1px solid black;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;/*main축 기준 */
+            align-items: center;/* cross 축 기준*/
+        }
+
+        .box {
+            /* flex: 1; */
+            border: 1px solid black;
+            background-color: lightblue;
+            width: 200px;
+            height: 300px;
+        }
+
+        /* #box2 {
+            flex: 2;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id='box1'></div>
+        <div class="box" id='box2'></div>
+        <div class="box" id='box3'></div>
+    </div>
+</body>
+</html>
