@@ -3,14 +3,15 @@
 
 <body>
     <input type="text" id="input01" value='990101-1234567'><br>
-    <button id="button01" onclick="show()">뒷자리는?</button>
+    <button id="button01" onclick="show()">앞자리는?</button>
     <p id="result"></p>
 
     <script>
         function show() {
             var str = document.getElementById("input01").value;
             console.log(str);
-            
+            // console.log(str.slice());
+            document.getElementById("result").innerHTML = str.slice(0,6);
         }
     </script>
 </body>
