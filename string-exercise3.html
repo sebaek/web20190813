@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body >
+    <input type="text" id="input01" value=''><br>
+    <button id="button01" onclick="show()">비속어 생략</button>
+    <p id="result"></p>
+
+    <script>
+        function show() {
+            var str = document.getElementById("input01").value;
+            console.log(str.replace("신발", "**"));
+            document.getElementById("result").innerHTML = str.replace("신발", "**");
+        }
+    </script>
+</body>
+
+</html>
