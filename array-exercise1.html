@@ -31,15 +31,17 @@
             var t = document.querySelector("#input01").value;
 
             t = t.trim();
-            if (t != "") {
-                a.push(t);
+            if (t !== "") {
+                a.unshift(t);
                 document.getElementById("result").innerHTML = a;
+            } else {
+                alert("텍스트를 넣어주세요.");
             }
 
         }
 
         function take() {
-            a.pop();
+            a.shift();
             document.querySelector("p").innerHTML = a;
         }
 
