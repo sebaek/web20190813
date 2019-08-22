@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <input type="text" id="input01"><br>
+    <input type="text" id="input01" value="모카"><br>
     <button id="button01" onclick="take()">&minus;</button>
     <button id="button02" onclick="put()">&plus;</button>
     <p id="result"></p>
@@ -25,8 +25,23 @@
 
     <script>
         var a = ['라떼', '초코', '아메'];
-        document.querySelector('#result').innerHTML = a;
+        document.querySelector('p').innerHTML = a;
         //
+        function put() {
+            var t = document.querySelector("#input01").value;
+
+            t = t.trim();
+            if (t != "") {
+                a.push(t);
+                document.getElementById("result").innerHTML = a;
+            }
+
+        }
+
+        function take() {
+            a.pop();
+            document.querySelector("p").innerHTML = a;
+        }
 
     </script>
 </body>
