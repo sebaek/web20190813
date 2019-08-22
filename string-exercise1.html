@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <body>
     <input type="text" id="input01"><br>
     <button id="button01" onclick="showLength()">길이는?</button>
@@ -9,8 +10,10 @@
         function showLength() {
             var str = document.getElementById("input01").value;
             console.log(str);
-            
+            console.log(str.length);
+            document.getElementById('result').innerHTML = str.length;
         }
     </script>
 </body>
+
 </html>
