@@ -14,9 +14,18 @@
 </head>
 <body>
     <p id="p01">유재석</p>
-    <button onclick="change()">GOOO</button>
-    <script>
+    <input type="text" id="i01"><br>
 
+    <button onclick="hello()">GOOO</button>
+    <script>
+        function hello() {
+            var name = document.getElementById('i01').value;
+            console.log(document.getElementById('i01').value);
+            document.querySelector('#p01').innerHTML = 'hello ' + name + '.';
+            document.querySelector('input').value = '';
+            document.querySelector('#i01').focus();
+            
+        }
     </script>
 </body>
 </html>
