@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html>
+
+<head>
     <style>
-    input, button, p {
-        font-size: 3em;    
-    }
+        input,
+        button,
+        p {
+            font-size: 3em;
+        }
     </style>
+</head>
+
 <body>
     <input type="number" id="input01"><br>
     <input type="number" id="input02"><br>
+    <button onclick="plus()">&plus;</button>
     <button onclick="minus()">&minus;</button>
     <button onclick="times()">&times;</button>
     <button onclick="divide()">&divide;</button>
     <p id='result'></p>
 
-    <script></script>
+    <script>
+        function plus() {
+            var n1 = document.getElementById('input01').value;
+            var n2 = document.getElementById('input02').value;
+            console.log(typeof Number(n1));
+            console.log(typeof Number(n2));
+            var n3 = Number(n1) + Number(n2);
+            document.getElementById('result').innerHTML = n3;
+        }
+        console.log(1);
+        function minus() {
+            console.log("minus function");
+            var n1 = document.getElementById('input01').value;
+            var n2 = document.getElementById('input02').value;
+            var n3 = n1 - n2;
+            document.getElementById('result').innerHTML = n3;
+        }
+
+        console.log(2);
+        function times() {
+            console.log("times function");
+            var n1 = document.getElementById('input01').value;
+            var n2 = document.getElementById('input02').value;
+            var n3 = n1 * n2;
+            document.getElementById('result').innerHTML = n3;
+        }
+
+        console.log(3);
+        function divide() {
+            console.log("divide function");
+            var n1 = document.getElementById('input01').value;
+            var n2 = document.getElementById('input02').value;
+            var n3 = n1 / n2;
+            document.getElementById('result').innerHTML = n3;
+        }
+
+        console.log(4);
+    </script>
 </body>
+
 </html>
