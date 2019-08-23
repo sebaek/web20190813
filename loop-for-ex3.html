@@ -5,6 +5,7 @@
     <style>
         * {
             font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
         }
     </style>
 </head>
@@ -14,10 +15,78 @@
     <button onclick="show0()" id="button1">연습용</button>
     <button onclick="show1()" id="button1">별 출력1</button>
     <button onclick="show2()" id="button1">별 출력2</button>
+    <button onclick="show3()" id="button1">별 출력3</button>
+    <button onclick="show4()" id="button1">별 출력4</button>
+    <button onclick="show5()" id="button1">별 출력5</button>
     <div id="result"></div>
 
 
     <script>
+
+        function show5() {
+            var res = document.querySelector("#result");
+            res.innerHTML = '';
+
+
+
+            for (var i = 0; i < 5; i++) {
+
+                for (var k = 0; k < (4 - i); k++) {
+                    res.innerHTML += "&nbsp;";
+                }
+                for (var j = 0; j < (i + 1); j++) {
+                    res.innerHTML += "*";
+                }
+                res.innerHTML += "<br>";
+            }
+
+        }
+
+        function show4() {
+            var res = document.querySelector("#result");
+            res.innerHTML = '';
+
+            for (var i = 0; i < 5; i++) {
+
+                for (var k = 0; k < i; k++) {
+                    res.innerHTML += "&nbsp;";
+                }
+
+                for (var j = 0; j < (5 - i); j++) {
+                    res.innerHTML += "*";
+                }
+
+                res.innerHTML += "<br>";
+            }
+
+        }
+
+        function show3() {
+            var res = document.querySelector("#result");
+            res.innerHTML = '';
+
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j < (5 - i); j++) {
+                    res.innerHTML += "*";
+                }
+                res.innerHTML += "<br>";
+            }
+
+        }
+        function show2() {
+            var res = document.querySelector("#result");
+            res.innerHTML = '';
+
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j < (i + 1); j++) {
+                    res.innerHTML += "*";
+                }
+                res.innerHTML += "<br>";
+            }
+
+        }
+
+
         function show0() {
             var res = document.querySelector("#result");
             res.innerHTML = '';
