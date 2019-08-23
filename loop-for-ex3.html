@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-        p, button, input {
-            font-size: 20px;
+
+<head>
+    <style>
+        * {
+            font-size: 40px;
         }
-        </style>
-    </head>
+    </style>
+</head>
 
-    <body>
-        
-        <button onclick="show1()" id="button1">별 출력1</button>
-        <button onclick="show2()" id="button1">별 출력2</button>
-        <div id="result"></div>
-        
+<body>
 
-        <script>
-            function show1() {
-                var res = document.querySelector("#result");
-                for (var i = 0; i < 5; i++) {
-                    for (var j = 0; j < 5; j++) {
-                        res.innerHTML += "*";
-                    }
-                    res.innerHTML += "<br>";
-                }
+    <button onclick="show0()" id="button1">연습용</button>
+    <button onclick="show1()" id="button1">별 출력1</button>
+    <button onclick="show2()" id="button1">별 출력2</button>
+    <div id="result"></div>
 
 
+    <script>
+        function show0() {
+            var res = document.querySelector("#result");
+            res.innerHTML = '';
+
+            for (var i = 10; i > 5; i--) {
+                res.innerHTML += i + ","
             }
-        </script>
-    </body>
+        }
+
+        function show1() {
+            var res = document.querySelector("#result");
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j < 5; j++) {
+                    res.innerHTML += "*";
+                }
+                res.innerHTML += "<br>";
+            }
+
+
+        }
+    </script>
+</body>
+
 </html>
