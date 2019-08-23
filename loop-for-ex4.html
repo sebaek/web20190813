@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        * {
+            font-size: 30px;
+        }
+        </style>
+    </head>
+<body>
+    <input value="라떼, 모카" type="text"><br>
+    <button onclick="insert()" id="button1">입력</button>
+    <ul id="result">
+
+    </ul>
+    <script>
+    function insert() {
+        //1 인풋요소의 값을 가져온다.
+        var text = document.querySelector('input').value;
+        // console.log(text);
+
+        //2. 콤마로 구분된 값들을 분리한다.
+        var items = text.split(",");
+        // console.log(items);
+
+        //3. 각 값들을 리스트에 넣어준다.
+        var ulElem = document.querySelector('#result');
+
+        for (var i = 0; i < items.length; i++) {
+            items[i] = items[i].trim();
+            if (items[i] === "") {
+                continue;
+            }
+            ulElem.innerHTML += "<li>" + items[i] + "</li>";
+        }
+    
+
+    }
+    </script>
+</body>
+</html>
