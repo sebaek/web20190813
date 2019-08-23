@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <style>
+        select,
+        p,
+        button,
+        span {
+            font-size: 40px;
+        }
+
+        select {
+            width: 200px;
+        }
+        #images img {
+            width: 300px;
+            height: 170px;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="" id="select01">
+        <option value="rock">&#9994;바위</option>
+        <option value="scissors">&#9996;가위</option>
+        <option value="paper">&#9995;보</option>
+    </select>
+    <button onclick="rsp()" id="button01">가위바위보</button>
+
+    <p>결과 : <span id='result'></span></p>
+    <div id="images">
+        <img src="img/보.png" alt="">
+    </div>
+    <!-- <p><span id="win">0</span>번 이겼습니다.</p>
+    <p><span id="tie">0</span>번 비겼습니다.</p>
+    <p><span id="lose">0</span>번 졌습니다.</p> -->
+    <script>
+        function rsp() {
+            var rsp = ['rock', 'scissors', 'paper'];
+            var computer = rsp[Math.floor(Math.random() * 3)];
+            var user = document.querySelector("#select01").value;
+
+            switch (computer) {
+                case 'rock':
+                    document.querySelector("#images img").src = 'img/바위.png';
+                    break;
+                case 'scissors':
+                document.querySelector("#images img").src = 'img/가위.png';
+                    break;
+                case 'paper':
+                document.querySelector("#images img").src = 'img/보.png';
+                    break;
+                default:
+            }
+            
+            // console.log('comp : ' + computer);
+            // console.log('user : ' + user);
+
+            if (computer === user) {
+                // console.log('비겼습니다.');
+                document.querySelector('#result').innerHTML = "비겼습니다.";
+            } else if (computer === 'rock' && user === 'scissors') {
+                // console.log('졌습니다.');
+                document.querySelector('#result').innerHTML = "졌습니다.";
+            } else if (computer === 'scissors' && user === 'paper') {
+                // console.log('졌습니다.');
+                document.querySelector('#result').innerHTML = "졌습니다.";
+            } else if (computer === 'paper' && user === 'rock') {
+                // console.log('졌습니다.');
+                document.querySelector('#result').innerHTML = "졌습니다.";
+            } else {
+                // console.log('이겼습니다.');
+                document.querySelector('#result').innerHTML = "이겼습니다.";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
