@@ -17,12 +17,31 @@
         <p></p>
         <p></p>
         <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
 
         <script>
+            function show2() {
+                var paras = document.querySelectorAll('p');
+                for (var i = 0; i < paras.length; i++) {
+                    paras[i].innerHTML = i;
+                }
+            }
+
+            function show1() {
+                var paras = document.querySelectorAll('p');
+                for (var i = 0; i < paras.length; i++) {
+                    paras[i].innerHTML = 8;
+                }
+            }
+
             function show0() {
                 // document.querySelector('p').innerHTML = '첫번째';
                 var paras = document.querySelectorAll('p');
-                for (var i = 0; i < 5; i++) {
+                for (var i = 0; i < paras.length; i++) {
                     paras[i].innerHTML = '숫자';
                 }
 

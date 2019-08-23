@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        p, button, input {
+            font-size: 20px;
+        }
+        </style>
+    </head>
+
+    <body>
+        <input type="number"><br>
+        <button onclick="show0()" id="button1">구구단 출력</button>
+        <div id="result"></div>
+        
+
+        <script>
+            function show0() {
+                var n = document.querySelector('input').value;
+                n = Number(n);
+
+                var res = document.querySelector('#result');
+                res.innerHTML = '';
+
+                for (var i = 1; i <= 9; i++) {
+                    res.innerHTML += n + " &times; " + i + ' = ' + (n*i) + "<br>";
+                }
+
+
+            }
+        </script>
+    </body>
+</html>
