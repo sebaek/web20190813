@@ -33,9 +33,9 @@
     <div id="images">
         <img src="" alt="">
     </div>
-    <!-- <p><span id="win">0</span>번 이겼습니다.</p>
+    <p><span id="win">0</span>번 이겼습니다.</p>
     <p><span id="tie">0</span>번 비겼습니다.</p>
-    <p><span id="lose">0</span>번 졌습니다.</p> -->
+    <p><span id="lose">0</span>번 졌습니다.</p>
     <script>
         function rsp() {
             // 컴퓨터가 랜덤 선택
@@ -63,18 +63,34 @@
             if (computer === user) {
                 // console.log('비김');
                 document.querySelector("#result").innerHTML = '비겼습니다.';
+                var n = document.querySelector("#tie").innerHTML;
+                n = Number(n);
+                document.querySelector("#tie").innerHTML = n + 1;
+
             } else if (computer === 'rock' && user === 'scissors') {
                 // console.log('짐');
                 document.querySelector("#result").innerHTML = '졌습니다.';
+                var n = document.querySelector("#lose").innerHTML;
+                n = Number(n);
+                document.querySelector("#lose").innerHTML = n + 1;
             } else if (computer === 'scissors' && user === 'paper') {
                 // console.log('짐');
                 document.querySelector("#result").innerHTML = '졌습니다.';
+                var n = document.querySelector("#lose").innerHTML;
+                n = Number(n);
+                document.querySelector("#lose").innerHTML = n + 1;
             } else if (computer === 'paper' && user === 'rock') {
                 // console.log('짐');
                 document.querySelector("#result").innerHTML = '졌습니다.';
+                var n = document.querySelector("#lose").innerHTML;
+                n = Number(n);
+                document.querySelector("#lose").innerHTML = n + 1;
             } else {
                 // console.log('이김');
                 document.querySelector("#result").innerHTML = '이겼습니다.';
+                var n = document.querySelector("#win").innerHTML;
+                n = Number(n);
+                document.querySelector("#win").innerHTML = n + 1;
             }
 
         }
