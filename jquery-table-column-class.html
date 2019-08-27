@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            table-layout: fixed;
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr:nth-child(even) {
+            background-color: aqua;
+        }
+
+        .black {
+            background-color: black;
+            color: white;
+        }
+
+        * {
+            font-size: 30px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("th, td").hover(function () {
+                var className = $(this).attr("class");
+                $("." + className).addClass("black");
+            }, function () {
+                var className = $(this).attr("class").split(" ")[0];
+                $("." + className).removeClass("black");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <table id="table1">
+        <tr>
+            <th class="col1">Lorem.</th>
+            <th class="col2">Nesciunt?</th>
+            <th class="col3">Aut?</th>
+        </tr>
+        <tr>
+            <td class="col1">Lorem.</td>
+            <td class="col2">Labore.</td>
+            <td class="col3">Nostrum.</td>
+        </tr>
+        <tr>
+            <td class="col1">Quas.</td>
+            <td class="col2">Quis.</td>
+            <td class="col3">Corrupti.</td>
+        </tr>
+        <tr>
+            <td class="col1">Fugit?</td>
+            <td class="col2">Deleniti.</td>
+            <td class="col3">Nobis!</td>
+        </tr>
+        <tr>
+            <td class="col1">Amet!</td>
+            <td class="col2">Dolorum?</td>
+            <td class="col3">Beatae!</td>
+        </tr>
+        <tr>
+            <td class="col1">Ipsam.</td>
+            <td class="col2">Nam.</td>
+            <td class="col3">Deleniti?</td>
+        </tr>
+        <tr>
+            <td class="col1">Impedit?</td>
+            <td class="col2">Molestiae?</td>
+            <td class="col3">Unde.</td>
+        </tr>
+        <tr>
+            <td class="col1">Odio!</td>
+            <td class="col2">Praesentium.</td>
+            <td class="col3">Quibusdam.</td>
+        </tr>
+        <tr>
+            <td class="col1">Vitae?</td>
+            <td class="col2">Accusamus?</td>
+            <td class="col3">Aut!</td>
+        </tr>
+        <tr>
+            <td class="col1">Eveniet.</td>
+            <td class="col2">Quaerat.</td>
+            <td class="col3">Iusto!</td>
+        </tr>
+        <tr>
+            <td class="col1">Ut!</td>
+            <td class="col2">Non!</td>
+            <td class="col3">Natus?</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
