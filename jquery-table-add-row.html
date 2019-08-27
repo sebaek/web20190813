@@ -30,7 +30,14 @@
             $("#btn1").click(function () {
                 var table = $("#table1");                
                 var trow = $("<tr />");
-                var td1 = $("<td />").text("Hello1");
+
+                var button = $("<button>&minus;</button>");
+                button.click(function () {
+                    trow.remove();
+                });
+
+                var td1 = $("<td />").append(button);
+
                 var td2 = $("<td />").text("Hello2");
                 var td3 = $("<td />").text("Hello3");
 
