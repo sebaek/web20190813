@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                var text = $("#input1").val();
+                var newElem = $("<li />").text(text);
+                newElem.click(function() {
+                    $(this).remove();
+                });
+                $("#list1").append(newElem);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <button id="button1">&plus;</button>
+    <ul id="list1"></ul>
+
+</body>
+
+</html>

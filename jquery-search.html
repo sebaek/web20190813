@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            table-layout: fixed;
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr:nth-child(even) {
+            background-color: aqua;
+        }
+
+        .black {
+            background-color: black;
+            color: white;
+        }
+
+        * {
+            font-size: 30px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            $("#input1").keyup(function() {
+                var trow = $("tr").not(":first").hide();
+                var txt = $(this).val();
+                trow.filter(function(i, e) {
+                    return $(e).text().toLowerCase().indexOf(txt) >= 0;
+                }).show();
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <!-- <button>&#128269;</button> -->
+    <table id="table1">
+        <tr>
+            <th class="col1">Lorem, ipsum.</th>
+            <th class="col2">Temporibus, laboriosam.</th>
+            <th class="col3">Illum, possimus?</th>
+        </tr>
+        <tr>
+            <td class="col1">Lorem, ipsum.</td>
+            <td class="col2">Animi, itaque.</td>
+            <td class="col3">Qui, ducimus.</td>
+        </tr>
+        <tr>
+            <td class="col1">Fugit, consectetur!</td>
+            <td class="col2">Ipsa, modi.</td>
+            <td class="col3">Ipsum, quisquam.</td>
+        </tr>
+        <tr>
+            <td class="col1">Cumque, rem?</td>
+            <td class="col2">Vitae, pariatur.</td>
+            <td class="col3">Sequi, delectus.</td>
+        </tr>
+        <tr>
+            <td class="col1">Tempora, repellendus.</td>
+            <td class="col2">Facere, quis?</td>
+            <td class="col3">Possimus, quibusdam.</td>
+        </tr>
+        <tr>
+            <td class="col1">Tempora, dignissimos?</td>
+            <td class="col2">Aperiam, ipsa!</td>
+            <td class="col3">Illo, maiores?</td>
+        </tr>
+        <tr>
+            <td class="col1">Vel, eius?</td>
+            <td class="col2">Dolorum, soluta.</td>
+            <td class="col3">Facilis, illo.</td>
+        </tr>
+        <tr>
+            <td class="col1">Nulla, adipisci.</td>
+            <td class="col2">Pariatur, optio.</td>
+            <td class="col3">Quibusdam, incidunt!</td>
+        </tr>
+        <tr>
+            <td class="col1">Consequatur, error.</td>
+            <td class="col2">Quod, asperiores.</td>
+            <td class="col3">Cupiditate, beatae!</td>
+        </tr>
+        <tr>
+            <td class="col1">Ea, a?</td>
+            <td class="col2">Vitae, nam!</td>
+            <td class="col3">Maxime, delectus.</td>
+        </tr>
+        <tr>
+            <td class="col1">Rerum, voluptatum.</td>
+            <td class="col2">Labore, optio!</td>
+            <td class="col3">Pariatur, vero!</td>
+        </tr>
+        <tr>
+            <td class="col1">Tempore, accusamus.</td>
+            <td class="col2">Nesciunt, amet.</td>
+            <td class="col3">Et, culpa.</td>
+        </tr>
+        <tr>
+            <td class="col1">Reprehenderit, esse.</td>
+            <td class="col2">At, illo?</td>
+            <td class="col3">Facere, praesentium.</td>
+        </tr>
+        <tr>
+            <td class="col1">Totam, quo.</td>
+            <td class="col2">Id, exercitationem?</td>
+            <td class="col3">Corporis, in?</td>
+        </tr>
+        <tr>
+            <td class="col1">Aliquam, officiis!</td>
+            <td class="col2">Vitae, veritatis?</td>
+            <td class="col3">Consequuntur, omnis!</td>
+        </tr>
+        <tr>
+            <td class="col1">Illo, sed!</td>
+            <td class="col2">Dolor, nobis!</td>
+            <td class="col3">Quaerat, tenetur.</td>
+        </tr>
+        <tr>
+            <td class="col1">Alias, rerum.</td>
+            <td class="col2">Neque, sed!</td>
+            <td class="col3">Praesentium, quas?</td>
+        </tr>
+        <tr>
+            <td class="col1">Non, corporis!</td>
+            <td class="col2">Alias, ducimus.</td>
+            <td class="col3">Error, repellat.</td>
+        </tr>
+        <tr>
+            <td class="col1">Excepturi, quisquam!</td>
+            <td class="col2">Aliquid, deserunt.</td>
+            <td class="col3">Maxime, at!</td>
+        </tr>
+        <tr>
+            <td class="col1">Corrupti, maiores!</td>
+            <td class="col2">Autem, facilis!</td>
+            <td class="col3">Similique, eligendi.</td>
+        </tr>
+        <tr>
+            <td class="col1">Voluptatum, a.</td>
+            <td class="col2">Nulla, in.</td>
+            <td class="col3">In, dolorem!</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
