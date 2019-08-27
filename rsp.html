@@ -47,13 +47,13 @@
 
             switch (computer) {
                 case 'rock':
-                    document.querySelector("#images>img").src = "img/바위.png";
+                    document.querySelector("#images>img").setAttribute('src', "img/바위.png"); 
                     break;
                 case 'scissors':
-                    document.querySelector("#images>img").src = "img/가위.png";
+                    document.querySelector("#images>img").setAttribute('src', "img/가위.png");
                     break;
                 case 'paper':
-                    document.querySelector("#images>img").src = "img/보.png";
+                    document.querySelector("#images>img").setAttribute('src', "img/보.png");
                     break;
                 default:
                     console.log("뭔가 잘 못됨...");

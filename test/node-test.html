@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>document.forms example</title>
+</head>
+
+<body>
+
+  <form name="login" id='login-id' action=".">
+    <input id='email-id' name="email" type="email">
+    <input name="password" type="password">
+    <button type="submit">Log in</button>
+  </form>
+  <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ad provident molestiae iusto accusamus explicabo tempore, deserunt, necessitatibus exercitationem asperiores incidunt expedita nostrum nesciunt voluptas. Dicta repudiandae dolorum deserunt adipisci.</p> -->
+
+  <script>
+    var loginForm = document.forms.login; // Or document.forms['login']
+    loginForm.elements.email.setAttribute('placeholder', 'test@e.com');
+    loginForm.elements.password.placeholder = 'password';
+    var n = window.document.querySelectorAll("*");
+    console.log(n);
+    // document.querySelector('form > button').addEventListener('click', function (event) {
+
+    //   event.preventDefault();
+    //   console.log('hi');
+    //   document.querySelector('form').submit();
+    // });
+  </script>
+</body>
+
+</html>

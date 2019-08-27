@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        table tr:nth-child(even) {
+            background-color: aqua;
+        }
+
+        th, td {
+            padding: 30px;
+            border-bottom: 1px solid black;
+        }
+        .rightAlign {
+            text-align: right;
+        }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        $(function() {
+            console.log($("*")[7]);
+            $("th").click(function() {
+                var className = $(this).attr("class");
+                className = className.split(" ")[0];
+                $("td" + "." + className).toggleClass("rightAlign");
+            });
+        });
+        </script>
+    </head>
+
+    <body>
+        <table id="table1">
+            <tr>
+                <th class="col1 centerAlign">Lorem.</th>
+                <th class="col2 centerAlign">Maiores!</th>
+                <th class="col3 centerAlign">Harum?</th>
+            </tr>
+            <tr>
+                <td class="col1">Lorem.</td>
+                <td class="col2">Quia.</td>
+                <td class="col3">Ullam.</td>
+            </tr>
+            <tr>
+                <td class="col1">Impedit?</td>
+                <td class="col2">Tempore.</td>
+                <td class="col3">Deleniti!</td>
+            </tr>
+            <tr>
+                <td class="col1">Eveniet.</td>
+                <td class="col2">Consequatur?</td>
+                <td class="col3">Explicabo!</td>
+            </tr>
+        </table>
+        
+    </body>
+</html>
