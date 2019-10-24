@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            /* border: 1px solid black; */
+        }
+
+        .nav {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+        }
+
+        .nav a {
+            display: block;
+            padding: 15px;
+            line-height: 30px;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            background-color: #222;
+            color: #eee;
+            border-bottom: 5px solid yellow;
+
+        }
+
+        a {
+            display: flex;
+            border: 1px solid black;
+            height: 70px;
+            align-items: center;
+        }
+
+        .anav {
+            padding: 0px;
+            display: flex;
+            justify-content: stretch;
+        }
+
+        .anav div {
+            border: 1px solid black;
+        }
+        span {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="">테스트</a>
+
+    <div class="anav">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+
+    </div>
+    <a class="anav" href="#">
+        <span>a</span>
+        <span>b</span>
+        <span>c</span>
+
+    </a>
+    <nav>
+        <div class="nav">
+            <div class="nav-left">
+                <a href="">중앙프로젝트</a>
+                <a href="">목록</a>
+
+            </div>
+            <div class="nav-right">
+                <a href="">로그인</a>
+                <a href="">회원가입</a>
+            </div>
+
+
+        </div>
+
+
+    </nav>
+
+
+
+</body>
+
+</html>
